@@ -10,7 +10,7 @@ Selleks kasutasin käsku apt-get install mysql-server php5-mysql
 # php töö kontrollimine
 php töö kontrollimiseks koostasin lühikese skripti kus saan vaadata kas php töötab
 
-HTTPS Protokoll
+#HTTPS Protokoll
 Turvalise ühenduse saamiseks sisestasin sellised käsud
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 genereerib turvalised võtmed
