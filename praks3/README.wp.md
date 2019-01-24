@@ -24,3 +24,4 @@ a2ensite default-ssl
 apache2ctl configtest
 ning tegin restardi apache2 serverile
 systemctl restart apache2
+täielik juhend leitav siit: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
