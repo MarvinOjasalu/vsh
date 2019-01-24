@@ -9,3 +9,18 @@ Selleks kasutasin käsku apt-get install mysql-server php5-mysql
 >apt get install phpmyadmin - instaleerib phpmyadmin graafilise keskkonna.
 # php töö kontrollimine
 php töö kontrollimiseks koostasin lühikese skripti kus saan vaadata kas php töötab
+
+HTTPS Protokoll
+Turvalise ühenduse saamiseks sisestasin sellised käsud
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+genereerib turvalised võtmed
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak backup faili tegemine
+Muutsin /etc/apache2/sites-available/default-ssl.conf sisu 
+Panid moodulid tööle
+a2enmod ssl
+a2enmod headers
+a2ensite default-ssl
+apache2ctl configtest
+ning tegin restardi apache2 serverile
+systemctl restart apache2
