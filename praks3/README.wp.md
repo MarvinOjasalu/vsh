@@ -25,3 +25,5 @@ apache2ctl configtest
 ning tegin restardi apache2 serverile
 systemctl restart apache2
 täielik juhend leitav siit: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
+# Kahes virtuaalmasinas wordpressi käivitamine
+Et saada kahes eraldi masinas wordpressi käivitada muutsin ma mysql kasutajat tehes ja õigusi muutes localhosti osa oma wordpressi serveri ip-ks 
